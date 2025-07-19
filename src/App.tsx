@@ -14,8 +14,6 @@ function App() {
   const [token, setToken] = useState(null);
   const [tableId, setTableId] = useState(null);
 
-  console;asdasdasdad
-
   return (
     <Router>
       <Routes>
