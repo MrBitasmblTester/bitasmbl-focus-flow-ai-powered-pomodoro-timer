@@ -5,7 +5,7 @@ const Timer: React.FC = () => {
   const [seconds, setSeconds] = useState(0);
   const [running, setRunning] = useState(false);
 
-  // Mistake: Missing dependency on `running`
+
   useEffect(() => {
     let interval: any;
     if (running) {
@@ -14,7 +14,7 @@ const Timer: React.FC = () => {
       }, 1000);
     }
     return () => clearInterval(interval);
-  }, []); // Mistake: empty dependency array
+  }, [running]); 
 
   const handleStart = () => {
     setRunning(true);
